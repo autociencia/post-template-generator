@@ -1,4 +1,4 @@
-Eu, como PO do projeto, desejo que seja disponibilizado pela ferramenta um botão que possibilite o downloaddo template gerado para publicação.
+Eu, como PO do projeto, desejo que seja disponibilizado pela ferramenta um botão que possibilite o download do template gerado para publicação.
 
 # Detalhamento
 
@@ -15,5 +15,5 @@ Validar que:
 
 * O botão de "download" está de acordo com o detalhamento
 * O botão de "download" permita ao usuário salvar um "screenshot" do template gerado
-* A imagem gerada esteja no formato PNG
+* A imagem gerada esteja no formato PNG, com alta qualidade
 * O título da imagem esteja no formato ano-mês-dia-horaminutosegundo seguido do sufixo "-post" ("yyyy-MM-dd-hhmmss-post", ex.: 2020-05-25-191202-post.png)
