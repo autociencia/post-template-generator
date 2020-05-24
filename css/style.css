@@ -131,6 +131,10 @@ html, body {
 
 /* Logo */
 #autologo {
+    background-image: url("/img/logo.png");
+    background-size: 42px 42px;
+    width: 42px;
+    height: 42px;
     position: absolute;
     transform: translate(490%, 440%);
     opacity: 0.2;
