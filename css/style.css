@@ -3,6 +3,7 @@
 html, body {
     scroll-behavior: smooth;
     background-color: #444444;
+    overflow-x: hidden;
 }
 
 /* Card Structure */
@@ -126,4 +127,11 @@ html, body {
 .card-image:hover #label-upload {
     opacity: 1;
     transition-duration: 0.2s;
+}
+
+/* Logo */
+#autologo {
+    position: absolute;
+    transform: translate(490%, 440%);
+    opacity: 0.2;
 }

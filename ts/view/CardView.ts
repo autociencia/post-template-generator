@@ -12,7 +12,8 @@ export class CardView extends View<Card> {
                         <label for="btn-upload-img" id="label-upload" title="Change background image">
                             Change
                         </label>
-                        <input type="file" id="btn-upload-img" name="upload" accept="image/png, image/jpeg">             
+                        <input type="file" id="btn-upload-img" name="upload" accept="image/png, image/jpeg">
+                        <img src="img/logo.png" id="autologo">
                     </div>
                 </div>
                 <div class="card-title" contentEditable="true">${card.title}</div>
