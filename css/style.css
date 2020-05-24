@@ -1,0 +1,129 @@
+/* Baisc CSS */
+
+html, body {
+    scroll-behavior: smooth;
+    background-color: #444444;
+}
+
+/* Card Structure */
+
+#card-view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 750px;
+    width: 500px;
+    max-width: 500px;
+    background-color: #e6e6e6;
+}
+
+.card-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    height: 440px;
+    width: 100%;
+    background-image: url("/img/background.jpg");
+}
+
+.card-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 430px;
+    width: calc(100% - 20px);
+    background-color: #ffffff;
+    background-image: url("/img/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-bottom: none;
+}
+
+.card-title {
+    padding: 10px;
+    color: #27ae60;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    font-size: 14pt;
+    font-weight: 500;
+    width: calc(100% - 20px);
+    background-color: #fff;
+    border-top: 1px solid #cccccc;
+    border-bottom: 3px solid #cccccc;
+    word-wrap: break-word;
+}
+
+.card-body {
+    padding: 10px;
+    margin: 10px;
+    align-self: stretch;
+    flex-grow: 1;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: justify;
+    font-size: 14pt;
+    color: #2c3e50;
+    width: calc(100% - 40px);
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #dbdbdb;
+    box-shadow: 2px 2px 2px #f1f1f1;
+    word-wrap: anywhere;
+}
+
+/* Upload and Download buttons */
+
+#btn-upload-img, #label-upload {
+    position: absolute;
+}
+
+#download-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#download, #label-upload {
+    margin-top: 10px;
+    padding: 15px;
+    color: #ffffff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 14pt;
+    background-color: #27ae60;
+    border: none;
+    border-radius: 5px;
+    transition-duration: 0.3s;
+}
+
+#download:hover, #label-upload:hover {
+    cursor: pointer;
+    background-color: #1f5c39;
+    transition-duration: 0.3s;
+}
+
+#download:active, #label-upload:active {
+    background-color: #2c3e50;
+}
+
+#download-link, #btn-upload-img {
+    display: none;
+}
+
+#label-upload {
+    opacity: 0;
+    transition-duration: 0.5s;
+}
+
+.card-image:hover #label-upload {
+    opacity: 1;
+    transition-duration: 0.2s;
+}

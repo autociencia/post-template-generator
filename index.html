@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link type="text/css" rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+        <script src="./lib/jquery.min.js"></script>
+        <script src="./lib/system.js"></script>
+        <script src="./lib/html2canvas.min.js" type="text/javascript"></script>
+        <!--
+            Name: Post Template Generator
+            Author: Autociência
+            Date: 2020-05-21
+        -->
+        <title>Post Template Generator</title>
+    </head>
+    <body>
+        
+        <div id="card-view"></div>
+        <div id="download-container">
+            <button id="download" title="Download template">Download</button>
+            <a id="download-link"></a>
+        </div>
+
+        <script>
+            SystemJS.config({
+                baseURL: '/js' // use '/js' for dev
+            });
+            var app = SystemJS.import('app.min.js');
+            app.then(function (script) {
+                SystemJS.import('ts/app').then(function (module) {
+                    var app = new module.App();
+                    app.start();
+                });
+            })
+        </script>
+    </body>
+</html>

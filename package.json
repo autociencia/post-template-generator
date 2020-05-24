@@ -1,0 +1,43 @@
+{
+  "name": "post-template-generator",
+  "version": "1.0.0",
+  "description": "Post template generator for Telegram, Facebook and Instagram",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/autociencia/post-template-generator.git"
+  },
+  "keywords": [
+    "post-template-generator",
+    "template-generator"
+  ],
+  "author": "Autociência",
+  "license": "Apache-2.0",
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/autociencia/post-template-generator/issues"
+  },
+  "homepage": "https://github.com/autociencia/post-template-generator#readme",
+  "devDependencies": {
+    "@types/jquery": "^3.3.31",
+    "grunt": "^1.0.4",
+    "grunt-contrib-uglify": "^4.0.1",
+    "grunt-contrib-uglify-es": "github:gruntjs/grunt-contrib-uglify#harmony",
+    "grunt-ts": "^6.0.0-beta.22",
+    "jquery": "^3.5.1",
+    "lite-server": "^2.5.4",
+    "systemjs": "^6.1.4",
+    "typescript": "^3.6.4"
+  },
+  "dependencies": {
+    "@types/html2canvas": "0.0.35"
+  }
+}
