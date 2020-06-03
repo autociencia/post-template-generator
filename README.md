@@ -19,3 +19,7 @@ Obs.: a imagem pode ser PNG ou JPG, mas precisa ter as seguintes dimensões:
 * 430px de altura
 
 O projeto foi desenvolvido em TypeScript e está sob a licença Apache 2.0. O [@Autociência](https://github.com/autociencia) **NÃO** se responsabiliza pelo uso indevido da ferramenta por terceiros.
+
+**TODO**
+
+Tornar a ferramenta funcional em mobile também.
