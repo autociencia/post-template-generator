@@ -20,12 +20,12 @@ export class UploadEvent {
         }
     }
 
-    static removeLabelButton(): void {
+    static removeButtonLabel(): void {
         const label = $('#label-upload');
         if (label) label.remove();
     }
 
-    static addLabelButton(): void {
+    static addButtonLabel(): void {
         const cardImage = $('.card-image');
 
         if (cardImage) {

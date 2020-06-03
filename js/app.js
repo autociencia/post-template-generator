@@ -249,12 +249,12 @@ System.register("ts/events/UploadEvent", [], function (exports_12, context_12) {
                         reader.readAsDataURL(image);
                     }
                 }
-                static removeLabelButton() {
+                static removeButtonLabel() {
                     const label = $('#label-upload');
                     if (label)
                         label.remove();
                 }
-                static addLabelButton() {
+                static addButtonLabel() {
                     const cardImage = $('.card-image');
                     if (cardImage) {
                         cardImage.append(`<label for="btn-upload-img" id="label-upload" title="Change background image">
@@ -285,19 +285,33 @@ System.register("ts/events/DownloadEvent", ["ts/util/index", "ts/events/UploadEv
             DownloadEvent = class DownloadEvent {
                 download() {
                     const post = document.querySelector('.card-container');
-                    const label = post.querySelector('label-upload');
-                    UploadEvent_1.UploadEvent.removeLabelButton();
-                    html2canvas(post).then((canvas) => {
+                    DownloadEvent.disableDownloadButton();
+                    UploadEvent_1.UploadEvent.removeButtonLabel();
+                    html2canvas(post, { scrollY: -window.scrollY }).then((canvas) => {
                         const ext = 'png';
                         const contentType = `data:image/${ext}`;
                         const imageData = canvas.toDataURL(`image/${ext}`, 1.0)
-                            .replace(/^contentType/, "data:application/octet-stream");
+                            .replace(contentType, "data:application/octet-stream");
                         $("#download-link")
                             .attr("download", index_3.DownloadUtil.getTitleAsTimestamp(ext))
                             .attr("href", imageData);
                         $("#download-link")[0].click();
+                        UploadEvent_1.UploadEvent.addButtonLabel();
+                        DownloadEvent.enableDownloadButton();
                     });
-                    UploadEvent_1.UploadEvent.addLabelButton();
+                }
+                static enableDownloadButton() {
+                    const button = $('#download');
+                    if (button) {
+                        console.info("foi");
+                        button.prop("disabled", false);
+                    }
+                }
+                static disableDownloadButton() {
+                    const button = $('#download');
+                    if (button) {
+                        button.prop("disabled", true);
+                    }
                 }
             };
             exports_13("DownloadEvent", DownloadEvent);
